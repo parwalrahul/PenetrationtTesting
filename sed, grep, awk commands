@@ -1,0 +1,1 @@
+sed -i 's/WHOIS/rahul/g'  /root/Desktop/info

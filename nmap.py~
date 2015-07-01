@@ -16,7 +16,7 @@ def a() :
 	os.system("dialog --infobox '	Welcome to the network mapper' 10 50") 
 	time.sleep(2)
 	def n():
-		os.system("dialog --menu 'Select Your Choice : ' 20 80 10 1 'Complete Network Scanning for active devices. ' 2 'Scan one or more Host' 3 'Know the Mac Address of host' 4 'Find if the ports of host machine are filtered or not' 5 'Scan a host protected by Firewall' 6 'Know Host interfaces and routes' 7 'Port Scanning  ' 8 'Internse Port Scanning' 9 'Back'  2> /root/Desktop/Project/choice.txt")
+		os.system("dialog --menu 'Select Your Choice : ' 20 80 12 1 'Complete Network Scanning for active devices. ' 2 'Scan one or more Host' 3 'Know the Mac Address of host' 4 'Find if the ports of host machine are filtered or not' 5 'Scan a host protected by Firewall' 6 'Know Host interfaces and routes' 7 'Port Scanning  ' 8 'Internse Port Scanning' 9 'OS scanning' 10 'Back'  2> /root/Desktop/Project/choice.txt")
 		f=open('/root/Desktop/Project/choice.txt','r')
 		c=f.read()
 		if c=='1' :
@@ -197,10 +197,20 @@ def a() :
 				n()
 
 
-		if c==9:
+		if c=='9':
+			os.system("dialog --inputbox 'Enter Host(s) IP Address : ' 10 50 2> /root/Desktop/Project/hello.txt")
+			f=open('/root/Desktop/Project/hello.txt','r')
+			x=f.read()
+			os.system("dialog --infobox 'Please wait till the processing is being done..' 10 50")
+			os.system("nmap -sS -O "+x+" > /root/Desktop/dump/result")
+			os.system("cat /root/Desktop/dump/result | grep Running > /root/Desktop/dump/result1")
+			os.system("dialog --textbox /root/Desktop/dump/result1 10 60")
+
+		if c==10:
 			exit()
+
 	
 	n()
 
-
+a()
 

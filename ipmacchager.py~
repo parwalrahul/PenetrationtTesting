@@ -1,0 +1,18 @@
+#! /usr/bin/python2
+
+import os
+import time
+
+
+while True :
+	i=2
+	while i<252:
+		p=str(i)
+	 	os.system("ifconfig wlan0 192.168.1."+p)
+		os.system("ifconfig wlan0 down")
+		os.system("macchanger -r wlan0 > /dev/null")
+		time.sleep(5)
+		i=i+1
+
+
+
