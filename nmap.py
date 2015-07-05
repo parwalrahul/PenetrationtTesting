@@ -13,20 +13,20 @@ def a() :
 	signal.signal(2,my)
 
 
-	os.system("dialog --infobox '	Welcome to the network mapper' 10 50") 
+	os.system("dialog --infobox '	       Welcome to the Network Mapper' 10 50") 
 	time.sleep(2)
 	def n():
-		os.system("dialog --menu 'Select Your Choice : ' 20 80 12 1 'Complete Network Scanning for active devices. ' 2 'Scan one or more Host' 3 'Know the Mac Address of host' 4 'Find if the ports of host machine are filtered or not' 5 'Scan a host protected by Firewall' 6 'Know Host interfaces and routes' 7 'Port Scanning  ' 8 'Internse Port Scanning' 9 'OS scanning' 10 'Back'  2> /root/Desktop/Project/choice.txt")
+		os.system("dialog --title 'Network Mapping Options :' --menu 'Select Your Choice : ' 20 80 12 1 'Complete Network Scanning for active devices. ' 2 'Scan one or more Host' 3 'Know the Mac Address of host' 4 'Find if the ports of host machine are filtered or not' 5 'Scan a host protected by Firewall' 6 'Know Host interfaces and routes' 7 'Port Scanning  ' 8 'Internse Port Scanning' 9 'OS scanning' 10 'Back'  2> /root/Desktop/Project/choice.txt")
 		f=open('/root/Desktop/Project/choice.txt','r')
 		c=f.read()
 		if c=='1' :
-			os.system("dialog --inputbox 'Enter Your IP Address : ' 10 50 2> /root/Desktop/Project/hello.txt")
+			os.system("dialog --title 'Network Scanning' --inputbox 'Enter Your IP Address : ' 10 50 2> /root/Desktop/Project/hello.txt")
 			f=open('/root/Desktop/Project/hello.txt','r')
 			x=f.read()
 			y=x+'/24'
-			os.system("dialog --infobox 'Please wait for some time till the nmap process is going on....' 10 50")
-			os.system("nmap -sP"+y+" > /root/Desktop/Project/result")
-			os.system("dialog --textbox /root/Desktop/Project/result 20 60")
+			os.system("dialog --title 'Network Scanning' --infobox 'Please wait for some time till the scanning process is going on....' 10 50")
+			os.system("nmap -sP "+y+" > /root/Desktop/Project/result")
+			os.system("dialog --title 'Network Scanning' --textbox /root/Desktop/Project/result 20 60")
 
 		if c=='2' :
 			os.system("dialog --inputbox 'Enter the number of hosts that you want to scan : ' 10 50 2> /root/Desktop/Project/choice")

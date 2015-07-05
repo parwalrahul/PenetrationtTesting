@@ -1,1 +1,7 @@
 sed -i 's/WHOIS/rahul/g'  /root/Desktop/info
+
+
+cat jjjjjjj-01.csv | grep MBLAZE | awk '{ print $1 }' | sed 's/.$//'
+
+
+gnome-terminal -x sh -c ' python nmap.py'
