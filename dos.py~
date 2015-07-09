@@ -49,11 +49,11 @@ def a():
 					i=i+1
 
 		if c=='2':
-			f=read('/root/Desktop/dump/wname','w')
+			f=open('/root/Desktop/dump/wname','w')
 			f.write("'")
 			f.close()
 			os.system("dialog --title 'DOS Wireless Network' --inputbox 'Enter Wireless Name : (Please be careful that you enter the exact same name.)' 10 80 2>> /root/Desktop/dump/wname")
-			f=read('/root/Desktop/dump/wname','a')
+			f=open('/root/Desktop/dump/wname','a')
 			f.write("'")
 			f.close()
 			os.system("dialog --title 'Processing' --infobox 'Doing Operations.. Please Wait' 10 40")
@@ -81,4 +81,4 @@ def a():
 			exit()
 	b()
 
-a()
+

@@ -4,10 +4,10 @@ import os
 import time
 
 def a():
-	os.system("dialog --infobox '	   The Basic Network Options  ' 10 40") 
+	os.system("dialog --no-shadow --infobox '	   The Basic Network Options  ' 10 40") 
 	time.sleep(1)
 	def nw():
-		os.system("dialog --title 'Network Options' --menu 'Select Your Choice : ' 20 100 7 1 'Know your IP Address ' 2 'Know your MAC address. ' 3 'Change your IP address. ' 4 'Change Your MAC address ' 5 'Know the Speed of your Lan Card.' 6 'Know your DNS Address' 7 'Back' 2> /root/Desktop/Project/choice.txt")
+		os.system("dialog --no-shadow --title 'Network Options' --menu 'Select Your Choice : ' 20 100 8 1 'Know your IP Address ' 2 'Know your MAC address. ' 3 'Change your IP address. ' 4 'Change Your MAC address ' 5 'Know Hosts MAC Address ' 6 'Know the Speed of your Lan Card.' 7 'Know your DNS Address' 8 'Back' 2> /root/Desktop/Project/choice.txt")
 		f=open('/root/Desktop/Project/choice.txt','r')
 		c=f.read()
 		if c=='1':
@@ -15,7 +15,7 @@ def a():
 			f.write("Your IP Address is : \n")
 			f.close()
 			os.system("ifconfig | grep Bcast | awk '{print $2}' | cut -c 6-18 >> /root/Desktop/Project/ip.txt")
-			os.system("dialog --textbox /root/Desktop/Project/ip.txt 10 30")
+			os.system("dialog --no-shadow --textbox /root/Desktop/Project/ip.txt 10 30")
 			nw()
 
 
@@ -24,7 +24,7 @@ def a():
 			f.write("Your MAC Address is : \n")
 			f.close()
 			os.system("ifconfig | grep HWaddr | awk '{print $5}' >> /root/Desktop/Project/mac.txt")
-			os.system("dialog --textbox /root/Desktop/Project/mac.txt 10 30")
+			os.system("dialog --no-shadow --textbox /root/Desktop/Project/mac.txt 10 30")
 			nw()
 
 
@@ -33,11 +33,11 @@ def a():
 			a=f.write("Your Current IP  Address is : \n")
 			f.close()
 			os.system("ifconfig | grep Bcast | awk '{print $2}' | cut -c 6-18 >> /root/Desktop/Project/ip.txt")
-			os.system("dialog --textbox /root/Desktop/Project/ip.txt 10 40")
+			os.system("dialog --no-shadow --textbox /root/Desktop/Project/ip.txt 10 40")
 			f=open('/root/Desktop/Project/ip.txt','w')
 			a=f.write("Your New IP  Address is : \n")
 			f.close()
-			os.system("dialog --inputbox 'Enter New IP Address : ' 10 50 2> /root/Desktop/Project/ipnew.txt")
+			os.system("dialog --no-shadow --inputbox 'Enter New IP Address : ' 10 50 2> /root/Desktop/Project/ipnew.txt")
 			f=open('/root/Desktop/Project/ipnew.txt','r')
 			a=f.read()
 			f.close()
@@ -45,7 +45,7 @@ def a():
 			f=open('/root/Desktop/Project/ip.txt','a')
 			f.write(a)
 			f.close()
-			os.system("dialog --textbox /root/Desktop/Project/ip.txt 10 30")
+			os.system("dialog --no-shadow --textbox /root/Desktop/Project/ip.txt 10 30")
 			nw()
 
 
@@ -54,11 +54,11 @@ def a():
 			a=f.write("Your Current MAC  Address is : \n")
 			f.close()
 			os.system("ifconfig | grep HWaddr | awk '{print $5}' >> /root/Desktop/Project/mac.txt")
-			os.system("dialog --textbox /root/Desktop/Project/mac.txt 10 40")
+			os.system("dialog --no-shadow --textbox /root/Desktop/Project/mac.txt 10 40")
 			f=open('/root/Desktop/Project/mac.txt','w')
 			a=f.write("Your New MAC  Address is : \n")
 			f.close()
-			os.system("dialog --inputbox 'Enter New MAC Address : ' 10 50 2> /root/Desktop/Project/macnew.txt")
+			os.system("dialog --no-shadow --inputbox 'Enter New MAC Address : ' 10 50 2> /root/Desktop/Project/macnew.txt")
 			f=open('/root/Desktop/Project/macnew.txt','r')
 			a=f.read()
 			f.close()
@@ -66,27 +66,37 @@ def a():
 			f=open('/root/Desktop/Project/mac.txt','a')
 			f.write(a)
 			f.close()
-			os.system("dialog --textbox /root/Desktop/Project/mac.txt 10 30")
+			os.system("dialog --no-shadow --textbox /root/Desktop/Project/mac.txt 10 30")
+			nw()
+
+		if c=='5':
+			os.system("dialog --no-shadow --inputbox 'Enter Host(s) IP Address : ' 10 50 2> /root/Desktop/Project/hello.txt")
+			f=open('/root/Desktop/Project/hello.txt','r')
+			x=f.read()
+			os.system("dialog --no-shadow --infobox 'Please wait till the Mac Detail is being searched...' 10 50")
+			os.system("ping -c 3 "+x+" > /dev/null")
+			os.system("arp "+x+" > /root/Desktop/Project/result")
+			os.system("dialog --no-shadow --textbox /root/Desktop/Project/result 10 80")
 			nw()
 
 
-		if c=='5':
+		if c=='6':
 			os.system("ethtool eth0 > /root/Desktop/dump/lan")
 			os.system("cat /root/Desktop/dump/lan | grep Speed > /root/Desktop/dump/speed")
-			os.system("dialog --textbox /root/Desktop/dump/speed 10 30")
+			os.system("dialog --no-shadow --textbox /root/Desktop/dump/speed 10 30")
 			nw()
 
 		
-		if c=='6':
+		if c=='7':
 			os.system("route -n | grep UG | awk '{print $2}' > /root/Desktop/dump/route")
-			os.system("dialog --textbox /root/Desktop/dump/route 10 20")
+			os.system("dialog --no-shadow --textbox /root/Desktop/dump/route 10 20")
 			nw()
 
 
-		if c==7:
+		if c==8:
 			exit()
 
 
 	nw()
 
-a()
+

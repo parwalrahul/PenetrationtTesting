@@ -5,3 +5,7 @@ cat jjjjjjj-01.csv | grep MBLAZE | awk '{ print $1 }' | sed 's/.$//'
 
 
 gnome-terminal -x sh -c ' python nmap.py'
+
+
+grep -A100 Checking /root/Desktop/hello
+
