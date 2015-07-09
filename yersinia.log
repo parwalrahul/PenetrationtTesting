@@ -1,0 +1,120 @@
+# yersinia v0.7.1 started in localhost on Thu Jul  9 17:46:36 2015
+
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 00a0.d15f.f5ac
+
+ wlan0 iflinkname EN10MB
+ wlan0 iflinkdesc Ethernet
+ wlan0 MAC = 0016.e39e.ecc8
+
+ nflog iflinkname NFLOG
+ nflog iflinkdesc Linux netfilter 
+libnet_init failed on nflog -> libnet_check_iface() ioctl: No such device
+
+
+ th_tty_peer thread = -1250489488...
+
+ th_uptime thread = -1242096784
+pcap_lookupnet failed: eth0: no IPv4 address assigned
+ eth0 libnet_handler 9F46538
+Entering command line mode...
+ attack_launch: -1250489488 Attack thread -1261618320 is born!!
+
+TERM signal received from -1233700800!
+ g00dbye function called from -1233700800
+
+ thread_destroy -1233700800 destroying -1250489488...
+ thread_destroy -1233700800 after PTHREAD_JOIN -1250489488...
+
+ ints_destroy started...
+ ints_destroy killing pcap_listener(-1233704080)...
+
+ thread_destroy -1233700800 destroying -1233704080...
+ thread_destroy -1233700800 after PTHREAD_JOIN -1233704080...
+ ints_destroy finished...
+ Showing MOTD..
+# yersinia finished on Thu Jul  9 17:47:15 2015
+
+# yersinia v0.7.1 started in localhost on Thu Jul  9 17:49:40 2015
+
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 00a0.d15f.f5ac
+
+ wlan0 iflinkname EN10MB
+ wlan0 iflinkdesc Ethernet
+ wlan0 MAC = 0016.e39e.ecc8
+
+ nflog iflinkname NFLOG
+ nflog iflinkdesc Linux netfilter 
+libnet_init failed on nflog -> libnet_check_iface() ioctl: No such device
+
+
+ th_tty_peer thread = -1250677904...
+
+ th_uptime thread = -1242285200
+ wlan0 libnet_handler 8D3B538
+Entering command line mode...
+ attack_launch: -1250677904 Attack thread -1261806736 is born!!
+
+TERM signal received from -1233889216!
+ g00dbye function called from -1233889216
+
+ thread_destroy -1233889216 destroying -1250677904...
+ thread_destroy -1233889216 after PTHREAD_JOIN -1250677904...
+
+ ints_destroy started...
+ ints_destroy killing pcap_listener(-1233892496)...
+
+ thread_destroy -1233889216 destroying -1233892496...
+ thread_destroy -1233889216 after PTHREAD_JOIN -1233892496...
+ ints_destroy finished...
+ Showing MOTD..
+# yersinia finished on Thu Jul  9 17:49:51 2015
+
+# yersinia v0.7.1 started in localhost on Thu Jul  9 17:51:31 2015
+
+
+ eth0 iflinkname EN10MB
+ eth0 iflinkdesc Ethernet
+ eth0 MAC = 00a0.d15f.f5ac
+
+ wlan0 iflinkname EN10MB
+ wlan0 iflinkdesc Ethernet
+ wlan0 MAC = 0016.e39e.ecc8
+
+ nflog iflinkname NFLOG
+ nflog iflinkdesc Linux netfilter 
+libnet_init failed on nflog -> libnet_check_iface() ioctl: No such device
+
+
+ eth2 iflinkname EN10MB
+ eth2 iflinkdesc Ethernet
+ eth2 MAC = 344b.50b7.ef79
+
+ th_tty_peer thread = -1251009680...
+
+ th_uptime thread = -1242616976
+pcap_lookupnet failed: wlan0: no IPv4 address assigned
+ wlan0 libnet_handler 8D5E6C0
+Entering command line mode...
+ attack_launch: -1251009680 Attack thread -1262138512 is born!!
+
+TERM signal received from -1234220992!
+ g00dbye function called from -1234220992
+
+ thread_destroy -1234220992 destroying -1251009680...
+ thread_destroy -1234220992 after PTHREAD_JOIN -1251009680...
+
+ ints_destroy started...
+ ints_destroy killing pcap_listener(-1234224272)...
+
+ thread_destroy -1234220992 destroying -1234224272...
+ thread_destroy -1234220992 after PTHREAD_JOIN -1234224272...
+ ints_destroy finished...
+ Showing MOTD..
+# yersinia finished on Thu Jul  9 17:52:31 2015
+
