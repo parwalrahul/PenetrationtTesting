@@ -1,0 +1,10 @@
+There are some Ranges for the Private IP(s):
+
+They are :
+1. 10.0.0.0    - 10.255.255.255
+2. 172.16.0.0  - 172.31.255.255
+3. 192.168.0.0 - 192.168.255.255  
+
+
+These IP's should be assigned if you are creating your own private network,
+else it may result in an illegal ip address and ip address confliction.

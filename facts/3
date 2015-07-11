@@ -1,0 +1,13 @@
+The maximum number of partitions supported by any Hard drive are 4
+
+Now You may wonder that you have seen more that 4 Partitions
+in many system. How was that possible?
+The explanation to that is that there are only 4 primary partitions possible
+on any hard drive.
+If you want to create more partitions then you have to make one partition as a 
+Extended Partition & inside that Extended Partition we can create upto 60 Logical Partitions.
+
+So you can split your hard drive in 4 partitions as 3 Primary Partition and 1 Extended Partition.
+& create upto 63 Physical Partitions in a single Hard drive. 
+
+The above rule also applies to our Pendrive.

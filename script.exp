@@ -1,0 +1,7 @@
+#! /usr/bin/expect -f
+spawn ssh root@127.0.0.1
+expect "password:"
+send "parwal\r";
+interact
+
+

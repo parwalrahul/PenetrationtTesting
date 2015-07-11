@@ -1,0 +1,18 @@
+Do you know that there is no rule for an IP Address (V4) to be of 4 octets
+& each octet of 8 bits only.
+Let us Understand this with a example :
+192.168.0.20 - Valid IP
+but even :
+192.168.1 is also a valid IP
+and even
+192 is also a valid IP
+
+There is only one rule for IP and that is it should be able to fit within 4 Bytes
+of storage space.
+So, any number that can fit in 4 bytes of storage is a valid IP.
+Whenever we send the request from our browser or terminal to any IP (in dot notation)
+our computer removes the dots and sends the packet to the destination.
+Also our IP is stored in decimal in the computer.
+so either we type 192.168.0.20 or  3232235540 (decimal form of the ip 192.168.0.20)
+It is the same thing..!!
+

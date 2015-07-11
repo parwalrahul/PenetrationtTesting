@@ -16,7 +16,7 @@ def a() :
 	os.system("dialog --no-shadow --no-shadow --infobox '	       Welcome to the Scanning Tool ' 10 50") 
 	time.sleep(2)
 	def n():
-		os.system("dialog --no-shadow --no-shadow --title 'Network Mapping Options :' --menu 'Select Your Choice : ' 20 80 12 1 'Complete Network Scanning for active devices. ' 2 'Scan one or more Host' 3 'Perform Version Detection on Host ' 4 'Find if the ports of host machine are filtered or not' 5 'Scan a host protected by Firewall' 6 'Know Host interfaces and routes' 7 'Port Scanning  ' 8 'Internse Port Scanning' 9 'OS scanning' 10 'Back'  2> /root/Desktop/dump/choice.txt")
+		os.system("dialog --no-shadow --no-shadow --title 'Network Mapping Options :' --menu 'Select Your Choice : ' 20 80 10 1 'Complete Network Scanning for Active Devices. ' 2 'Scan one or more Host' 3 'Perform Version Detection on Host ' 4 'Find if the ports of host machine are Filtered or not' 5 'Scan a host protected by Firewall' 6 'Know Host interfaces and Routes' 7 'Port Scanning  ' 8 'Internse Port Scanning' 9 'OS Scanning' 10 'Back'  2> /root/Desktop/dump/choice.txt")
 		f=open('/root/Desktop/dump/choice.txt','r')
 		c=f.read()
 		if c=='1' :

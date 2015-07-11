@@ -1,0 +1,14 @@
+The Size of 1MB is NOT 1024 KB but only 1000 KB.
+In actuality, the whole memory given in our system is in 
+KiB, MiB, GiB, TiB.
+So Mathematically,
+1 MB = 1000 KB
+1 MiB = 1024 KiB where MiB stands for MebiByte.
+To understand this,
+Note that computers work in power of 2
+So 1MiB = 2^10 = 1024 KiB
+& as we humans prefer working in power of 10
+So 1MB  = 10^3 = 1000 KB
+
+Data inside computer is also copied in the KiB, MiB & GiB.
+Now you can figure out why a 8 GB pendrive comes only with 7.88 GiB.  

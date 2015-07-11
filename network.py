@@ -4,10 +4,10 @@ import os
 import time
 
 def a():
-	os.system("dialog --no-shadow --infobox '	   The Basic Network Options  ' 10 40") 
+	os.system("dialog --no-shadow --infobox ' The Basic Network & System Options  ' 10 40") 
 	time.sleep(1)
 	def nw():
-		os.system("dialog --no-shadow --title 'Network Options' --menu 'Select Your Choice : ' 20 100 8 1 'Know your IP Address ' 2 'Know your MAC address. ' 3 'Change your IP address. ' 4 'Change Your MAC address ' 5 'Know Hosts MAC Address ' 6 'Know the Speed of your Lan Card.' 7 'Know your DNS Address' 8 'Back' 2> /root/Desktop/Project/choice.txt")
+		os.system("dialog --no-shadow --title 'Network & System Options' --menu 'Select Your Choice : ' 20 100 10 1 'Know your IP Address ' 2 'Know your MAC address. ' 3 'Change your IP address. ' 4 'Change Your MAC address ' 5 'Know Hosts MAC Address ' 6 'Know the Speed of your Lan Card.' 7 'Know your Gateway(s) Address' 8 'Know Your Kernel Details' 9 'Know Your CPU Details' 10 'Back' 2> /root/Desktop/Project/choice.txt")
 		f=open('/root/Desktop/Project/choice.txt','r')
 		c=f.read()
 		if c=='1':
@@ -89,11 +89,20 @@ def a():
 		
 		if c=='7':
 			os.system("route -n | grep UG | awk '{print $2}' > /root/Desktop/dump/route")
-			os.system("dialog --no-shadow --textbox /root/Desktop/dump/route 10 20")
+			os.system("dialog --no-shadow --textbox /root/Desktop/dump/route 10 60")
 			nw()
 
+		if c=='8':
+			os.system("uname -a > /root/Desktop/dump/kernel")
+			os.system("dialog --no-shadow --textbox /root/Desktop/dump/kernel 10 60")
+			nw()
 
-		if c==8:
+		if c=='9':
+			os.system("lscpu > /root/Desktop/dump/cpu")
+			os.system("dialog --no-shadow --textbox /root/Desktop/dump/cpu 20 60")
+			nw()
+
+		if c==10:
 			exit()
 
 

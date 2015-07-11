@@ -1,0 +1,11 @@
+Have you ever wondered that why you need to reboot your system after
+uninstalling any software for the effects to take place ?
+
+The Reason is the RAM of your System.
+Basically the Ram is a read only device.
+Data can be loaded on it but can't be written on it.
+On Reboot,
+RAM is recreated.
+
+& this is the reason why We have to reboot our system for effects
+to take place.

@@ -1,0 +1,22 @@
+			for(i=0;i<10;i++)
+
+Most of the people having a programming background are familiar with this for loop.
+And a common myth among most of the people is that :
+The First Block (i=0) of the foor loop is the Initialization Block.
+& The Last Block (i++) of the foor loop is the Updation Block.
+
+Well, this is absolutely wrong and absurd.
+The truth is that :
+The first block is simply a statement block and not an initialization block.
+So any statement of the progamming language can come inside this block.
+Ex: printf("hi") is also a valid statement for the first block.
+and for loop does not cares if the condition is true or not, it will simply print hi.
+
+For loop is a unique feature in programming which provides this facility and
+only this feature distinguishes it from the while loop.
+
+Now coming to the last block, the last block is not an updation block but a Termination Block
+So any valid programming statement come here.
+The termination block can be used to execute any statement after validation of condition.  
+
+

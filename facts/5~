@@ -1,0 +1,10 @@
+"yes" is a very important command in the linux system which are used
+to create file of large size (in GB's) in seconds.
+
+Example of this command is :
+yes "hello" > hello.txt
+
+Use CTRL+C after 10 to 20 seconds and see the size of the file hello.txt 
+located in the current working directory.
+
+Note : Run for a long time it may fill up your entire HDD Space very Quickly. 

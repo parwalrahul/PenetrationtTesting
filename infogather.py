@@ -20,7 +20,7 @@ def a():
 	os.system("dialog --no-shadow --infobox ' Welcome to the Reconnaissance tool' 10 40") 
 	time.sleep(2)
 	def info():	
-		os.system("dialog --no-shadow --menu 'Select Your Choice : ' 20 100 7 1 'Gather information about any website and it(s) owner.' 2 'Know the route to the server where website is hosted.' 3 'Download the Complete Website on your System.' 4 'Back' 2> /root/Desktop/Project/choice.txt")
+		os.system("dialog --no-shadow --menu 'Select Your Choice : ' 20 100 7 1 'Gather information about any website and it(s) owner.' 2 'Know the route to the server where website is hosted.' 3 'Download the Complete Website on your System.' 4 'Get info about Webserver & Website.' 5 'Back.' 2> /root/Desktop/Project/choice.txt")
 		f=open('/root/Desktop/Project/choice.txt','r')
 		c=f.read()
 		if c=='1':
@@ -55,9 +55,22 @@ def a():
 			info()
 
 
-		if c==4:
-			exit(0)
+		if c=='4':
+			os.system("dialog --no-shadow --inputbox ' Enter Website Address:\n(Example: www.google.com) ' 10 50 2> /root/Desktop/dump/site")
+			f=open('/root/Desktop/dump/site','r')
+			site=f.read()
+			os.system("dialog --no-shadow --infobox 'The Information Gathering Process is going on.. \nPlease wait till the report is being processed. ' 10 40")
+			l=commands.getoutput("curl -X GET -v "+site)
+			f=open('/root/Desktop/result','w')
+			f.write(l)
+			f.close()
+			#os.system("grep -A1000000 Host /root/Desktop/dump/result > /root/Desktop/dump/result1")
+			os.system("dialog --no-shadow --msgbox 'The Report is stores at /root/Desktop/result' 20 80")
+			info()
 
+		if c==5:
+			exit()
+	
 	info()
 
-a()
+

@@ -1,0 +1,9 @@
+In Linux, You can use the system from 7 different user accounts at a time.
+
+As Linux is a combination of CLI as well as GUI So,
+5 Users can log into the CLI (Command Line Interface) &
+2 Users can log into the GUI (Guided User Interface).
+
+You can use CTRL + ALT + {F1,F2,F3,F4,F5,F6,F7} to switch
+between these accounts.
+

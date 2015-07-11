@@ -1,0 +1,11 @@
+You can easily determine that a hosts machine belongs to which
+family of Operating System by knowing the default TTL value
+for each O.S.
+just ping the host(s) machine and note the TTL value.
+(TTL = Time To Live)
+
+Here are the TTL values corresponding to some famous families of OS:
+Windows - 128
+Linux - 64 or 255
+Mac - 60
+
